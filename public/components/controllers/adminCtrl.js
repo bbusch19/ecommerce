@@ -8,12 +8,12 @@ angular.module('ecommerceApp').controller('adminCtrl', function($scope, mainServ
       mainService.postProduct(newProduct);
   }
 
-  $scope.changeProduct = function(product, id) {
-    mainService.putProduct(product, id);
+  $scope.changeProduct = function(product) {
+    mainService.putProduct(product);
   }
 
-  $scope.removeProduct = function(productId) {
-    mainService.deleteProduct(productId)
+  $scope.removeProduct = function(product) {
+    mainService.deleteProduct(product);
   }
 
 })

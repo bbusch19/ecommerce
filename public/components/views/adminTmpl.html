@@ -1,6 +1,8 @@
 <div class="row">
   <div class="input-field col s6">
-    <input value="Name" id="first_name2" type="text" class="validate" ng-model="newProduct.name" placeholder="Add Product by Name">
+    <input value="Name" id="first_name2" type="text" class="validate" ng-model="newProduct.title" placeholder="New Product Title">
+    <input value="Name" id="first_name2" type="text" class="validate" ng-model="newProduct.description" placeholder="New Product Description">
+    <input value="Name" id="first_name2" type="text" class="validate" ng-model="newProduct.price" placeholder="New Product Price">
     <label class="active">Add Product</label>
     <button ng-click="addProduct(newProduct)" class="btn waves-effect waves-light" type="submit" name="action">Submit
     </button>
@@ -9,10 +11,12 @@
 
 <div class="row">
   <div class="input-field col s6">
-    <input id="first_name2" type="text" class="validate" ng-model="product.name" placeholder="Change Product Name">
-    <input id="first_name2" type="text" class="validate" ng-model="id" placeholder="Id of Product to Change">
+    <input id="first_name2" type="text" class="validate" ng-model="product.title" placeholder="Change Product Title">
+    <input id="first_name2" type="text" class="validate" ng-model="product.description" placeholder="Change Product Description">
+    <input id="first_name2" type="text" class="validate" ng-model="product.price" placeholder="Change Product Price">
+    <input id="first_name2" type="text" class="validate" ng-model="product.id" placeholder="Id of Product to Change">
     <label class="active">Make Changes</label>
-    <button ng-click="changeProduct(product, id)" class="btn waves-effect waves-light" type="submit" name="action">Add Changes
+    <button ng-click="changeProduct(product)" class="btn waves-effect waves-light" type="submit" name="action">Add Changes
     </button>
   </div>
 </div>
@@ -20,9 +24,9 @@
 
 <div class="row">
   <div class="input-field col s6">
-    <input value="ID" id="first_name2" type="text" class="validate" ng-model="productId" placeholder="Delete Product by ID">
+    <input value="ID" id="first_name2" type="text" class="validate" ng-model="throwAway.id" placeholder="Delete Product by ID">
     <label class="active">Delete Product</label>
-    <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="removeProduct(productId)">Delete
+    <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="removeProduct(throwAway)">Delete
     </button>
   </div>
 </div>
@@ -31,7 +35,7 @@
 <div class="row">
   <div class="col s12 m5" ng-repeat="product in products">
     <div class="card-panel teal">
-      <span class="white-text">{{product.name}} <br /> {{product._id}}
+      <span class="white-text">{{product.title}} <br /> {{product.description}}<br />{{product.price}}<br />{{product._id}}
       </span>
     </div>
   </div>

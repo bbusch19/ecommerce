@@ -15,18 +15,18 @@ this.postProduct = function(newProduct) {
   })
 }
 
-this.putProduct = function(product, id) {
+this.putProduct = function(product) {
   $http({
     method: 'PUT',
-    url: 'http://localhost:3000/products/' + id,
+    url: 'http://localhost:3000/products/' + product.id,
     data: product
   })
 }
 
-this.deleteProduct = function(productId) {
+this.deleteProduct = function(product) {
   $http({
     method: 'DELETE',
-    url: 'http://localhost:3000/products/' + productId
+    url: 'http://localhost:3000/products/' + product.id
   })
 }
 
